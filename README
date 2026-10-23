@@ -1,0 +1,90 @@
+# Data Science 500 – Book Market Analytics
+
+## 1. Project Overview
+
+This project analyses book prices, star ratings, stock availability and genre trends using data collected from the Books to Scrape website.
+
+The project follows the data science process, including data acquisition, data cleaning, exploratory data analysis, data visualisation and predictive modelling using Linear Regression.
+
+## 2. Data Source
+
+**Website:** https://books.toscrape.com/
+
+Books to Scrape is a website designed for practising web scraping. The Python program attempts to collect data from all 50 catalogue pages, containing up to 1,000 book listings.
+
+The number of successfully collected records may vary depending on website accessibility and missing data.
+
+## 3. Technologies Used
+
+- **Python** – programming language
+- **Requests** – retrieving webpages
+- **Beautiful Soup** – extracting information from HTML
+- **pandas** – organising, cleaning and analysing data
+- **Matplotlib** – creating visualisations
+- **scikit-learn** – building and evaluating the Linear Regression model
+
+## 4. Data Collected
+
+The program collects or derives the following fields:
+
+- Book title
+- Book price in GBP (£)
+- Star rating
+- Stock availability
+- Stock quantity, where available
+- Book genre
+- Product type
+- Product description
+- Number of reviews, where available
+- Description word count
+
+## 5. Installation
+
+Install the required Python libraries using:
+
+```bash
+python -m pip install requests beautifulsoup4 pandas matplotlib scikit-learn
+```
+
+## 6. How to Run the Project
+
+1. Open the Python file in PyCharm or another Python environment.
+2. Ensure that the required libraries are installed.
+3. Run `data_science_assignment.py`.
+4. Allow the program to scrape the website and process the data.
+5. Check the `book_market_outputs` folder for the generated datasets and graphs.
+
+An active internet connection is required to retrieve data from the website.
+
+## 7. Output Files
+
+The program generates the following files:
+
+- `books_raw_dataset.csv` – raw scraped data.
+- `books_cleaned_dataset.csv` – cleaned dataset used for analysis.
+- `book_price_predictions.csv` – actual prices, predicted prices and prediction errors.
+- `graphs/` – visualisations saved as PNG files, including price distribution, average price by rating, books by genre, average price by genre, rating versus price, stock availability, description length versus price, reviews versus price, and actual versus predicted prices.
+
+## 8. Predictive Modelling
+
+A Linear Regression model estimates book prices using selected features, including star rating, stock quantity, review count, description word count, genre and stock status.
+
+The model is evaluated using:
+
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- R-squared (R²)
+
+The reported results are generated when the program runs and depend on the collected dataset.
+
+## 9. Limitations
+
+- Some webpages or product details may not be accessible during scraping.
+- Missing values may affect the amount of usable data.
+- The website's stock information may not provide much variation for analysis.
+- The Linear Regression model estimates patterns in this particular dataset and may not generalise to other bookstores or real-world book markets.
+
+## 10. Main Deliverables
+
+The main assignment deliverables are the completed Jupyter Notebook, the final dataset and the professional project report. This README provides additional instructions for running and understanding the project.
